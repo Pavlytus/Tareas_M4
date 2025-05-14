@@ -44,14 +44,9 @@ if (VerificarExistencia){
 else{
   console.log("No, no tenemos camisetas.")}
 
-  
 
   
   
   
  
   
-  // // 4. (Opcional) Calcular el total de precios de productos baratos con reduce
-  // let totalBaratos = productosBaratos.reduce((acc, producto) => acc + producto.precio, 0);
-  // console.log("💰 Total del precio de productos < $100:");
-  // console.log(`$${totalBaratos}`);
