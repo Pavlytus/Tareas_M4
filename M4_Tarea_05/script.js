@@ -1,18 +1,33 @@
-// Ejercicio 1: Recursividad
-const gifts = ["Muñeca", "Carro de juguete", "Rompecabezas", "Lego", "Pelota"];
+// Problema: Búsqueda del Máximo en un Arreglo con Divide and Conquer
+// Dado un arreglo de números, implementa una función que utilice el enfoque Divide and Conquer para encontrar el número máximo.
 
-// TODO: Completa esta función para que busque recursivamente el regalo en la lista
-function findGift(gifts, giftName, index = 0) {
-    // Caso base: Si llegamos al final de la lista
-    if (gifts[index] === giftName) {
-            return `${giftName} está en la posición ${index}.`;
-        }
-        if (index === gifts.length) {
-        return `${giftName} no está en la lista.`;
+// Instrucciones para resolver el problema:
+// Divide el arreglo en dos mitades.
+// Resuelve el problema recursivamente para encontrar el máximo en cada mitad.
+// Combina las soluciones comparando los máximos de ambas mitades.
+// Devuelve el número máximo encontrado.
+
+
+function findLongestWord(text) {
+    // TODO: Dividir el texto en palabras y almacenarlas en una variable
+    const words = text.split(' ');
+    console.log(words); // Mostrar las palabras en la consola
+    let longestWord = ''; // Inicializar la palabra más larga
+    // TODO: Recorrer el arreglo de palabras con un ciclo
+    for (i=0; i<words.length; i++) {
+        // TODO: Comparar la longitud de la palabra actual con la más larga
+        if (words[i].length > longestWord.length) {
+            // Actualizar la palabra más larga
+            longestWord = words[i];
+            }
     }
-    return findGift(gifts, giftName, index + 1);
-}
-// Ejemplo de uso
-console.log(findGift(gifts, "Lego"));
-console.log(findGift(gifts, "Camión"));
 
+    // TODO: Retornar la palabra más larga encontrada
+    return longestWord;
+
+}
+
+// Ejemplo de uso
+const text = "JavaScript es un lenguaje de programación increíble para aprender.";
+// TODO: Llama a la función y muestra el resultado
+console.log(findLongestWord(text)); // Resultado esperado: "programación"
